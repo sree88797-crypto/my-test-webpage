@@ -1,37 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sreenath S</title>
+<title>Sreenath S | Portfolio</title>
 <style>
 body{
   margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
   background:#0f172a;
   font-family:Arial, sans-serif;
+  color:white;
+}
+.container{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 }
 .box{
   background:#020617;
   padding:40px;
-  width:360px;
+  width:380px;
   text-align:center;
   border-radius:16px;
   box-shadow:0 0 25px rgba(56,189,248,0.4);
 }
-h1{color:#38bdf8;margin-bottom:10px;}
-h3{color:#e5e7eb;margin:6px 0;font-weight:500;}
-p{margin-top:15px;color:#cbd5f5;font-size:14px;}
+h1{color:#38bdf8;margin-bottom:8px;}
+h3{margin:6px 0;font-weight:500;color:#e5e7eb;}
+p{margin-top:12px;color:#cbd5f5;font-size:14px;}
+
+.projects{
+  margin-top:25px;
+  text-align:left;
+}
+.projects h2{
+  text-align:center;
+  color:#38bdf8;
+  margin-bottom:15px;
+}
+.project-item{
+  background:#0f172a;
+  padding:12px;
+  border-radius:8px;
+  margin-bottom:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.project-item span{
+  color:#e5e7eb;
+}
+.project-item a{
+  text-decoration:none;
+  background:#38bdf8;
+  color:#020617;
+  padding:6px 12px;
+  border-radius:6px;
+  font-size:13px;
+  font-weight:bold;
+}
+.project-item a:hover{
+  background:#0ea5e9;
+}
 </style>
 </head>
 <body>
 
-<div class="box">
-  <h1>Sreenath S</h1>
-  <h3>ECE Student</h3>
-  <h3>1st Year</h3>
-  <p>Here I am going to upload my projects.</p>
+<div class="container">
+  <div class="box">
+    <h1>Sreenath S</h1>
+    <h3>ECE Student</h3>
+    <h3>1st Year</h3>
+    <p>Here I am going to upload my projects.</p>
+
+    <div class="projects">
+      <h2>My Projects</h2>
+
+      <div class="project-item">
+        <span>Project 1</span>
+        <a href="project1.html">Open</a>
+      </div>
+
+      <div class="project-item">
+        <span>Project 2</span>
+      </div>
+
+      <div class="project-item">
+        <span>Project 3</span>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 </body>
