@@ -2,75 +2,162 @@
 <html>
 <head>
 <title>Sreenath S | Portfolio</title>
+
+<!-- Modern Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
 
 body{
   margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#f8fafc;
+  font-family: 'Inter', sans-serif;
+  background:#f4f7fb;
   color:#1e293b;
 }
 
+/* ===== HEADER ===== */
 .header{
   text-align:center;
-  padding:80px 20px 50px 20px;
-  background:#0f172a;
+  padding:110px 20px 80px 20px;
+  background:linear-gradient(135deg,#0f172a,#1e3a8a);
   color:white;
 }
 
 .header h1{
-  font-size:42px;
-  margin-bottom:10px;
+  font-family: 'Playfair Display', serif;
+  font-size:56px;
+  font-weight:700;
+  margin-bottom:15px;
+  letter-spacing:1px;
+}
+
+.header h2{
+  font-weight:400;
+  font-size:22px;
+  margin:8px 0;
+  color:#e0f2fe;
 }
 
 .header h3{
-  font-weight:400;
-  margin:5px 0;
+  font-weight:300;
+  font-size:18px;
+  margin:6px 0;
   color:#cbd5e1;
 }
 
-.section{
-  padding:50px 20px;
-  text-align:center;
+.header p{
+  margin-top:20px;
+  font-size:15px;
+  color:#f1f5f9;
 }
 
-.section h2{
+/* ===== SECTION COMMON ===== */
+.section{
+  padding:70px 20px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* ===== ABOUT ===== */
+.about{
+  background:white;
+  border-radius:16px;
+  padding:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.07);
+  margin-bottom:70px;
+}
+
+.about h2{
   font-size:28px;
-  margin-bottom:30px;
+  margin-bottom:20px;
+  font-weight:600;
   color:#0f172a;
 }
 
+.about p{
+  font-size:16px;
+  line-height:1.7;
+  color:#475569;
+}
+
+/* ===== PROJECTS ===== */
+.projects-title{
+  text-align:center;
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:40px;
+  color:#0f172a;
+  letter-spacing:1px;
+}
+
 .project-card{
-  max-width:400px;
+  max-width:420px;
   margin:0 auto;
-  padding:20px;
+  padding:30px;
   background:white;
-  border-radius:12px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  transition:0.3s;
+  text-align:center;
+}
+
+.project-card:hover{
+  transform:translateY(-8px);
+}
+
+.project-card h3{
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.project-card p{
+  font-size:15px;
+  color:#64748b;
 }
 
 .project-card a{
   display:inline-block;
-  margin-top:15px;
+  margin-top:20px;
   text-decoration:none;
-  background:#0f172a;
+  background:#1e3a8a;
   color:white;
-  padding:8px 16px;
-  border-radius:6px;
+  padding:10px 20px;
+  border-radius:8px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.project-card a:hover{
+  background:#2563eb;
 }
 
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <div class="header">
   <h1>Sreenath S</h1>
-  <h3>ECE Department</h3>
-  <h3>1st Year Student</h3>
+  <h2>Electronics and Communication Engineering Student</h2>
+  <h3>1st Year</h3>
+  <p>Email: sree54321nathtt@gmail.com</p>
 </div>
 
 <div class="section">
-  <h2>My Projects</h2>
+
+  <!-- ABOUT -->
+  <div class="about">
+    <h2>About</h2>
+    <p>
+      I am an Electronics and Communication Engineering student with a strong interest in Electronics. 
+      I am currently learning and exploring various concepts in my field to strengthen my fundamentals. 
+      I enjoy understanding how electronic systems work and continuously improving my technical knowledge.
+    </p>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="projects-title">My Projects</div>
 
   <div class="project-card">
     <h3>Project 1</h3>
