@@ -3,58 +3,80 @@
 <head>
 <title>Projects</title>
 <style>
+
 body{
   font-family:Arial;
   margin:0;
   background:#f1f5f9;
 }
 
+/* container */
 .container{
-  padding:30px;
+  padding:40px 20px;
+  text-align:center;
 }
 
-.card{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  max-width:420px;
-  box-shadow:0 8px 22px rgba(0,0,0,0.08);
-}
-
+/* back button */
 .back{
   text-decoration:none;
   background:#0f172a;
   color:white;
   padding:8px 14px;
   border-radius:6px;
+  position:absolute;
+  left:20px;
+  top:20px;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  background:#1e3a8a;
-  color:white;
-  padding:8px 16px;
+/* title */
+.title{
+  font-size:32px;
+  margin-top:40px;
+  margin-bottom:30px;
+}
+
+/* project list */
+.project-list{
+  max-width:500px;
+  margin:0 auto;
+  background:white;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+  text-align:left;
+}
+
+/* clickable project */
+.project-link{
+  display:block;
+  font-size:18px;
+  padding:12px 10px;
   text-decoration:none;
-  border-radius:6px;
+  color:#1e3a8a;
+  font-weight:500;
+  border-radius:8px;
+  transition:.25s;
 }
 
-.btn:hover{
-  background:#2563eb;
+.project-link:hover{
+  background:#eef2ff;
+  padding-left:18px;
 }
+
 </style>
 </head>
 <body>
 
+<a class="back" href="index.html">← Back</a>
+
 <div class="container">
-  <a class="back" href="index.html">← Back</a>
-  <h2>My Projects</h2>
+  <h2 class="title">My Projects</h2>
 
-  <div class="card">
-    <h3>Smart Watering System</h3>
-    <a class="btn" href="project1.html">View Project</a>
+  <div class="project-list">
+    <a class="project-link" href="project1.html">
+      1. Smart Watering System
+    </a>
   </div>
-
 </div>
 
 </body>
