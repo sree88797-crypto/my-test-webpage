@@ -3,31 +3,25 @@
 <head>
 <title>Sreenath S | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-html{
-  scroll-behavior:smooth;
-}
 
 body{
   margin:0;
   font-family:'Inter', sans-serif;
   background:#f4f7fb;
-  color:#1e293b;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .navbar{
-  position:sticky;
-  top:0;
   background:#0f172a;
-  padding:14px;
+  padding:15px;
   display:flex;
   justify-content:center;
   gap:40px;
-  z-index:1000;
+  position:sticky;
+  top:0;
 }
 
 .navbar a{
@@ -35,17 +29,16 @@ body{
   text-decoration:none;
   font-size:17px;
   font-weight:500;
-  transition:.3s;
 }
 
 .navbar a:hover{
   color:#60a5fa;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header{
   text-align:center;
-  padding:110px 20px 80px 20px;
+  padding:110px 20px 90px;
   background:linear-gradient(135deg,#0f172a,#1e3a8a);
   color:white;
 }
@@ -53,105 +46,33 @@ body{
 .header h1{
   font-family:'Playfair Display', serif;
   font-size:56px;
-  font-weight:700;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
 .header h2{
   font-weight:400;
-  font-size:22px;
-  margin:8px 0;
   color:#e0f2fe;
 }
 
 .header h3{
   font-weight:300;
-  font-size:18px;
-  margin:6px 0;
   color:#cbd5e1;
 }
 
 .header p{
-  margin-top:20px;
-  font-size:15px;
-  color:#f1f5f9;
-}
-
-/* ===== SECTION ===== */
-.section{
-  padding:70px 20px;
-  max-width:900px;
-  margin:auto;
-}
-
-/* ===== ABOUT ===== */
-.about{
-  background:white;
-  border-radius:16px;
-  padding:40px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.07);
-  margin-bottom:70px;
-}
-
-.about h2{
-  font-size:28px;
-  margin-bottom:20px;
-  font-weight:600;
-}
-
-.about p{
-  font-size:16px;
-  line-height:1.7;
-  color:#475569;
-}
-
-/* ===== PROJECTS ===== */
-.projects-title{
-  text-align:center;
-  font-size:32px;
-  font-weight:700;
-  margin-bottom:40px;
-}
-
-.project-card{
-  max-width:420px;
-  margin:0 auto;
-  padding:30px;
-  background:white;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.08);
-  transition:0.3s;
-  text-align:center;
-}
-
-.project-card:hover{
-  transform:translateY(-8px);
-}
-
-.project-card a{
-  display:inline-block;
-  margin-top:20px;
-  text-decoration:none;
-  background:#1e3a8a;
-  color:white;
-  padding:10px 20px;
-  border-radius:8px;
-}
-
-.project-card a:hover{
-  background:#2563eb;
+  margin-top:15px;
 }
 
 </style>
 </head>
 <body>
 
-<!-- ✅ NAVBAR -->
+<!-- NAVBAR -->
 <div class="navbar">
-  <a href="#about">About</a>
-  <a href="#academics">Academics</a>
-  <a href="#projects">Projects</a>
-  <a href="#campus">Campus Pics</a>
+  <a href="about.html">About</a>
+  <a href="academics.html">Academics</a>
+  <a href="projects.html">Projects</a>
+  <a href="others.html">Others</a>
 </div>
 
 <!-- HEADER -->
@@ -160,44 +81,6 @@ body{
   <h2>Electronics and Communication Engineering Student</h2>
   <h3>1st Year</h3>
   <p>Email: sree54321nathtt@gmail.com</p>
-</div>
-
-<div class="section">
-
-  <!-- ABOUT -->
-  <div id="about" class="about">
-    <h2>About</h2>
-    <p>
-      I am an Electronics and Communication Engineering student with a strong interest in Electronics.
-      I am currently learning and exploring various concepts in my field to strengthen my fundamentals.
-      I enjoy understanding how electronic systems work and continuously improving my technical knowledge.
-    </p>
-  </div>
-
-  <!-- ACADEMICS -->
-  <div id="academics" class="about">
-    <h2>Academics</h2>
-    <p>
-      B.E Electronics and Communication Engineering – 1st Year<br>
-      (You can update with your college details)
-    </p>
-  </div>
-
-  <!-- PROJECTS -->
-  <div id="projects" class="projects-title">My Projects</div>
-
-  <div class="project-card">
-    <h3>Project 1</h3>
-    <p><strong>Smart Watering System</strong></p>
-    <a href="project1.html">View Project</a>
-  </div>
-
-  <!-- CAMPUS -->
-  <div id="campus" class="about" style="margin-top:70px;">
-    <h2>Campus Pics</h2>
-    <p>Upload your campus photos here later 📸</p>
-  </div>
-
 </div>
 
 </body>
