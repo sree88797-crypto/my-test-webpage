@@ -1,6 +1,50 @@
-iframe{
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Watering System</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f1f5f9;
+}
+
+.container{
+  padding:20px;
+}
+
+.back{
+  text-decoration:none;
+  background:#0f172a;
+  color:white;
+  padding:8px 14px;
+  border-radius:6px;
+}
+
+/* PDF viewer */
+.viewer{
   width:100%;
-  height:88vh;
+  height:90vh;
   border:none;
+  margin-top:15px;
   border-radius:10px;
 }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <a class="back" href="projects.html">← Back</a>
+  <h2>Smart Watering System</h2>
+
+  <!-- VIEW ONLY PDF -->
+  <iframe 
+    class="viewer"
+    src="project1.pdf#toolbar=0&navpanes=0&scrollbar=1">
+  </iframe>
+
+</div>
+
+</body>
+</html>
