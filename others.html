@@ -2,42 +2,69 @@
 <html>
 <head>
 <title>Others</title>
+
 <style>
-body{font-family:Arial;margin:0;background:#f1f5f9;}
-.container{padding:30px;}
-.back{
-  text-decoration:none;
-  background:#0f172a;
-  color:white;
-  padding:8px 14px;
-  border-radius:6px;
+
+body{
+font-family:Arial;
+background:#f4f7fb;
+text-align:center;
+padding:50px;
 }
-.card{
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  margin-top:20px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+
+.box{
+background:white;
+padding:40px;
+border-radius:10px;
+width:300px;
+margin:auto;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
+
+.value{
+font-size:40px;
+color:#1e3a8a;
+margin-top:20px;
+}
+
 </style>
 </head>
+
 <body>
 
-<div class="container">
-  <a class="back" href="index.html">← Back</a>
-  <h2>Others</h2>
+<h1>Live Gas Sensor Data</h1>
 
-  <div class="card">
-    <p>
-      • Certifications<br>
-      • Workshops<br>
-      • Achievements<br>
-      • Internships<br>
-      • Hackathons
-    </p>
-  </div>
+<div class="box">
+
+<h2>Gas Value</h2>
+
+<div class="value" id="gasValue">
+Loading...
+</div>
 
 </div>
+
+<script>
+
+const url = "https://api.thingspeak.com/channels/3289446/fields/1/last.json?api_key=E43XWBWZDGC14PD8";
+
+function getData(){
+
+fetch(url)
+.then(response => response.json())
+.then(data => {
+
+document.getElementById("gasValue").innerText = data.field1;
+
+});
+
+}
+
+setInterval(getData,15000);
+
+getData();
+
+</script>
 
 </body>
 </html>
