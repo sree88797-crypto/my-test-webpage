@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Others</title>
+
+<title>Gas Sensor Live Updates</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
 
@@ -9,60 +12,80 @@ body{
 font-family:Arial;
 background:#f4f7fb;
 text-align:center;
-padding:50px;
+padding:40px;
 }
 
-.box{
-background:white;
-padding:40px;
-border-radius:10px;
-width:300px;
+h1{
+color:#1e3a8a;
+}
+
+.container{
+width:80%;
 margin:auto;
+background:white;
+padding:30px;
+border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-.value{
-font-size:40px;
-color:#1e3a8a;
-margin-top:20px;
-}
-
 </style>
+
 </head>
 
 <body>
 
-<h1>Live Gas Sensor Data</h1>
+<h1>Gas Sensor Live Updates</h1>
 
-<div class="box">
+<div class="container">
 
-<h2>Gas Value</h2>
-
-<div class="value" id="gasValue">
-Loading...
-</div>
+<canvas id="gasChart"></canvas>
 
 </div>
 
 <script>
 
-const url = "https://api.thingspeak.com/channels/3289446/fields/1/last.json?api_key=E43XWBWZDGC14PD8";
+const channelID = "3289446";
+const readAPI = "E43XWBWZDGC14PD8";
 
-function getData(){
+const url = `https://api.thingspeak.com/channels/${channelID}/feeds.json?api_key=${readAPI}&results=20`;
 
-fetch(url)
-.then(response => response.json())
-.then(data => {
+async function loadChart(){
 
-document.getElementById("gasValue").innerText = data.field1;
+const response = await fetch(url);
+const data = await response.json();
 
+let labels = [];
+let values = [];
+
+data.feeds.forEach(feed => {
+
+labels.push(feed.created_at);
+values.push(feed.field1);
+
+});
+
+const ctx = document.getElementById('gasChart').getContext('2d');
+
+new Chart(ctx,{
+type:'line',
+data:{
+labels:labels,
+datasets:[{
+label:'Gas Sensor Value',
+data:values,
+borderWidth:3
+}]
+},
+options:{
+responsive:true
+}
 });
 
 }
 
-setInterval(getData,15000);
+loadChart();
 
-getData();
+setInterval(loadChart,15000);
 
 </script>
 
