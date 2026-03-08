@@ -9,7 +9,7 @@
 <style>
 
 body{
-font-family:Arial;
+font-family: Arial;
 background:#f4f7fb;
 text-align:center;
 padding:40px;
@@ -20,7 +20,7 @@ color:#1e3a8a;
 }
 
 .container{
-width:80%;
+width:85%;
 margin:auto;
 background:white;
 padding:30px;
@@ -37,9 +37,7 @@ box-shadow:0 0 10px rgba(0,0,0,0.1);
 <h1>Gas Sensor Live Updates</h1>
 
 <div class="container">
-
 <canvas id="gasChart"></canvas>
-
 </div>
 
 <script>
@@ -59,7 +57,19 @@ let values = [];
 
 data.feeds.forEach(feed => {
 
-labels.push(feed.created_at);
+let utcTime = new Date(feed.created_at);
+
+let indianTime = utcTime.toLocaleString("en-IN", {
+timeZone: "Asia/Kolkata",
+year: "numeric",
+month: "short",
+day: "numeric",
+hour: "2-digit",
+minute: "2-digit",
+second: "2-digit"
+});
+
+labels.push(indianTime);
 values.push(feed.field1);
 
 });
@@ -73,11 +83,20 @@ labels:labels,
 datasets:[{
 label:'Gas Sensor Value',
 data:values,
-borderWidth:3
+borderWidth:3,
+fill:false
 }]
 },
 options:{
-responsive:true
+responsive:true,
+scales:{
+x:{
+ticks:{
+maxRotation:90,
+minRotation:45
+}
+}
+}
 }
 });
 
